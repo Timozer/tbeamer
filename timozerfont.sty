@@ -1,0 +1,72 @@
+
+% !TEX TS-program xelatex
+% !TEX encoding = UTF-8 Unicode
+% -*- coding: UTF-8; -*-
+% vim: set fenc=utf-8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  FileName: timozerfont.sty
+%%  Author:   Timozer
+%%  E-mail:   zhenyuwang94@gmail.com
+%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{timozerfont}[2018/02/02 v0.4 Provide Chinese Environment]
+
+\RequirePackage{fontspec}
+\RequirePackage{xeCJK}
+
+%------------- Fonts Settings -------------
+%\defaultfontfeatures{Path = fonts/cn/, Mapping = tex-text}
+\defaultfontfeatures{Mapping = tex-text}
+
+%------------- Fonts Define ---------------
+% if you want to use more fonts, please do it like blow
+%\newCJKfontfamily[family]\cmd{font.file}
+%\newCJKfontfamily[SmallCaps]\SCF{SmallCaps.otf}
+
+%%------------- Chinese Fonts  -------------
+\setCJKmainfont[ 
+        BoldFont = Hiragino Sans GB W6, ItalicFont = STKaiti
+    ]{FZShuSong-Z01S}
+\setCJKsansfont[
+    BoldFont = Hiragino Sans GB, 
+    SmallCapsFont={Fontin SmallCaps},
+    ]{Hiragino Sans GB}
+\setCJKmonofont{FZShuSong-Z01S}
+
+%%------------- English Fonts  -------------
+\setmainfont[
+    ItalicFont = {Times New Roman Italic},
+    BoldFont = {Times New Roman Bold},
+    SmallCapsFont={Fontin SmallCaps},
+]{Times New Roman}
+\setsansfont[SmallCapsFont={Fontin SmallCaps}]{Optima}
+\setmonofont{Monaco}
+
+\def\timozer@def@fontsize#1#2{%
+    \expandafter\newcommand\csname #1\endcsname[1][1.3]{%
+        \fontsize{#2}{##1\dimexpr #2}\selectfont}}
+
+\timozer@def@fontsize{chuhao}{42bp}
+\timozer@def@fontsize{xiaochu}{36bp}
+%\timozer@def@fontsize{yihao}{26bp}
+\timozer@def@fontsize{xiaoyi}{24bp}
+%\timozer@def@fontsize{erhao}{22bp}
+%\timozer@def@fontsize{xiaoer}{18bp}
+\timozer@def@fontsize{sanhao}{16bp}
+%\timozer@def@fontsize{xiaosan}{15bp}
+\timozer@def@fontsize{sihao}{14bp}
+%\timozer@def@fontsize{xiaosi}{12bp}
+%\timozer@def@fontsize{wuhao}{10.5bp}
+%\timozer@def@fontsize{xiaowu}{9bp}
+\newcommand{\yihao}{\Huge}
+\newcommand{\erhao}{\huge}
+\newcommand{\xiaoer}{\LARGE}
+\newcommand{\xiaosan}{\Large}
+\newcommand{\xiaosi}{\large}
+\newcommand{\wuhao}{\normal}
+\newcommand{\xiaowu}{\small}
+%\setlength{\parindent}{2em}
+\endinput

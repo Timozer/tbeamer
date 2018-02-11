@@ -1,0 +1,116 @@
+% !TEX TS-program xelatex
+% !TEX encoding = UTF-8 Unicode
+% -*- coding: UTF-8; -*-
+% vim: set fenc=utf-8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  FileName: beamerinnerthemeTIMOZER.sty
+%%  Author:   Timozer
+%%  E-mail:   zhenyuwang94@gmail.com
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamerinnerthemeTIMOZER}[2018/02/04 TIMOZER beamer inner theme]
+
+\mode<presentation>
+
+%\RequirePackage{etoolbox}
+% AfterPreamble, AtEndPreamble, AfterEndPreamble, AfterEndDocument, 
+% AtBeginDocument, AtBeginEnvironment, AtEndEnvironment
+\RequirePackage{tikz}
+\RequirePackage{xifthen}
+\RequirePackage{timozercode}
+%\setbeamertemplate{background}{%
+    %\begin{tikzpicture}
+        %\useasboundingbox (0, 0) rectangle(\the\paperwidth, \the\paperheight);
+        %\fill[color=brown] (0, 2) rectangle(\the\paperwidth, \the\paperheight);
+        %\fill[color=orange] (0, 0) rectangle(2.95, 1.9);
+        %\fill[color=blue!50!cyan!80] (3.05, 0) rectangle (\the\paperwidth, 1.9);
+        %\ifnum\thepage>1\relax%
+            %\fill[white, opacity=1] (0, 0) rectangle (\the\paperwidth, \the\paperheight);
+        %\fi
+    %\end{tikzpicture}
+%}
+
+% Title page
+\setbeamertemplate{title page}{%
+    \begin{tikzpicture}[remember picture, overlay]
+        % draw title and subtitle(if)
+        \draw (current page.west) ++(2em, 0.1em) node[anchor=south west, align=left]%
+        {
+            {\usebeamerfont*{title}\usebeamercolor*{title}\inserttitle}
+            \ifx\insertsubtitle\@empty\else 
+                \\ 
+                {\usebeamerfont*{subtitle}\usebeamercolor*{subtitle}\insertsubtitle}
+            \fi
+        };
+        % draw separation line
+        \draw[black, very thick] (current page.west) ++(2.2em, 0) -- (current page.east);
+        % draw author & institute(if) & date
+        \draw (current page.west) ++(2em, -0.3em) node[anchor=north west,  align=left]%
+        {
+            {\usebeamerfont*{author}\usebeamercolor*{author}\insertauthor}
+            \ifx\insertinstitute\@empty\else \\ \fi
+            {\usebeamerfont*{institute}\usebeamercolor*{institute}\insertinstitute}
+            \\[\smallskipamount]
+            {\usebeamerfont*{date}\usebeamercolor*{date}\insertdate}
+        };
+    \end{tikzpicture}
+}
+
+%\setbeamertemplate{part page}{%
+    %\begin{tikzpicture}[remember picture, overlay]
+        %% part title
+        %\draw (current page.west) ++(2em, 0.1em) node[anchor=south west, align=left]%
+        %{
+            %{\usebeamerfont*{part title}\usebeamercolor*{title}\insertromanpartnumber.~\insertpart}
+        %};
+        %% separation line
+        %\draw[black, vert thick] (current page.west) ++(2.2em, 0) --(current page.east);
+        %% 
+
+    %\end{tikzpicture}
+%}
+
+\setbeamertemplate{section page}{%
+    \begin{tikzpicture}[remember picture, overlay]
+        % section title
+        \draw (current page.west) ++(2em, 0.1em) node[anchor=south west, align=left]%
+        {
+            {\usebeamerfont*{section title}\usebeamercolor*{title}\insertsectionnumber.~\insertsection}
+            % for subsection, \insertsubsectionnumber, \insertsubsection(for title)
+        };
+        % separation line
+        \draw[black, very thick] (current page.west) ++(2.2em, 0) -- (current page.east);
+    \end{tikzpicture}
+}
+
+% appendix
+%\defbeamertemplate{part page}{appendix}{%
+    %\begin{tikzpicture}[remember picture, overlay]
+        %\draw (current page.west) ++(2em, 0.1em) node[anchor=south west, align=left]%
+        %{
+            %{\usebeamerfont*{part title}\usebeamercolor*{title}\insertpart}
+        %};
+        %\draw[black, very thick] (current page.west) ++(2.2em, 0) -- (current page.east);
+    %\end{tikzpicture}
+%}
+% Resets the style of all items
+\setbeamertemplate{items}[default]
+% Items
+\setbeamertemplate{itemize item}[default]
+\setbeamertemplate{itemize subitem}[--]
+\setbeamertemplate{itemize subsubitem}[circle]
+
+% Table of contents
+\setbeamertemplate{sections/subsections in toc}[square]
+
+% Test for minted code environment
+\defbeamertemplate*{code begin}{TIMOZER}
+{
+    \begin{minted}{tex}
+}
+\defbeamertemplate*{code end}{TIMOZER}
+{
+    \end{minted}
+}
+\mode<all>

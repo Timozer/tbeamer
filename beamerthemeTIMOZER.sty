@@ -1,0 +1,104 @@
+% !TEX TS-program xelatex
+% !TEX encoding = UTF-8 Unicode
+% -*- coding: UTF-8; -*-
+% vim: set fenc=utf-8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  FileName: beamerthemeTIMOZER.sty
+%%  Author:   Timozer
+%%  E-mail:   zhenyuwang94@gmail.com
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamerthemeTIMOZER}[2018/02/04 TIMOZER beamer theme]
+
+\mode<presentation>
+
+%\RequirePackage{appendixnumberbeamer} % Stops frame counting when the \appendix cmd is used
+\RequirePackage{etoolbox}
+\RequirePackage{tikz}
+\RequirePackage{timozerfont}
+\RequirePackage{timozercode}
+
+% Defines
+\newcounter{lastframe}
+
+\useinnertheme{TIMOZER}
+\useoutertheme{TIMOZER}
+\usecolortheme{TIMOZER}
+\usefonttheme{TIMOZER}
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+
+% sidebar width left, sidebar width right, 
+%\setbeamersize{text margin left=2em, text margin right=2em}
+
+\renewcommand{\maketitle}{%
+    \ifbeamer@inframe
+        \titlepage
+    \else
+        %\setbeamertemplate{frame numbering}[none]
+        \frame{\titlepage}
+        %\setbeamertemplate{frame numbering}[fraction]
+    \fi
+}
+
+% 目前并不需要用 part 
+%\newcommand{\partframe}{%
+    %\ifbeamer@inframe
+        %\partpage
+    %\else
+        %\setcounter{lastframe}{\value{framenumber}}
+        %\setcounter{framenumber}{-1}
+        %\setbeamertemplate{frame numbering}[none]
+
+        %\frame{\partpage}
+
+        %\setbeamertemplate{frame numbering}[fraction]
+        %\setcounter{framenumber}{\value{lastframe}}
+    %\fi
+%}
+\newcommand{\sectionframe}{%
+    \ifbeamer@inframe
+        \sectionpage
+    \else
+        %\setcounter{lastframe}{\value{framenumber}}
+        %\setcounter{framenumber}{-1}
+        %\setbeamertemplate{frame numbering}[none]
+
+        \frame{\sectionpage}
+
+        %\setbeamertemplate{frame numbering}[fraction]
+        %\setcounter{framenumber}{\value{lastframe}}
+    \fi
+}
+%\newcommand{\subsectionframe}{%
+    %\ifbeamer@inframe
+        %\subsectionpage
+    %\else
+        %\setcounter{lastframe}{\value{framenumber}}
+        %\setcounter{framenumber}{-1}
+        %\setbeamertemplate{frame numbering}[none]
+
+        %\frame{\subsectionpage}
+
+        %\setbeamertemplate{frame numbering}[fraction]
+        %\setcounter{framenumber}{\value{lastframe}}
+    %\fi
+%}
+
+% 仅仅插入节页面
+%\AtBeginPart{\partframe}
+\AtBeginSection{\sectionframe}
+%\AtBeginSubsection{\subsectionframe}
+
+% 我暂时并不想要附录, 所以先给它注释掉
+% Appendix Settings
+%\AtBeginDocument{\apptocmd{\appendix}{%
+    %\setbeamertemplate{frame numbering}[none]
+    %\setbeamertemplate{part page}[appendix]
+    %\frame{\partpage}
+    %\setbeamertemplate{frame numbering}[appendix]
+    %}{}{}
+%}
+\mode<all>

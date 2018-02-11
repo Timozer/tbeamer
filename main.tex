@@ -1,0 +1,122 @@
+% !TEX TS-program xelatex
+% !TEX encoding = UTF-8 Unicode
+% -*- coding: UTF-8; -*-
+% vim: set fenc=utf-8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  FileName: main.tex
+%%  Author:   Timozer
+%%  E-mail:   zhenyuwang94@gmail.com
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[no-math]{beamer}
+
+\usepackage[UTF8, noindent]{ctexcap}
+
+\usetheme{TIMOZER}
+
+\title{三峡中心403例会幻灯片\TeX{}模板}
+\subtitle{\LaTeXe{} Beamer 模板 \textsc{Version 0.1}}
+\date{\today}
+\author{王震宇\quad \texttt{zhenyuwang94@gmail.com}}
+\institute{计算机学院}
+
+\begin{document}
+    \begin{frame}
+        \titlepage
+    \end{frame}
+    \begin{frame}{目录}
+        \tableofcontents
+    \end{frame}
+    \begin{frame}{项目颜色测试}
+        \begin{itemize}
+            \item This is itemize.
+                \begin{itemize}
+                    \item Subitem.
+                        \begin{itemize}
+                            \item Subsubitem.
+                        \end{itemize}
+                \end{itemize}
+        \end{itemize}
+        \begin{enumerate}
+            \item This is enumrate.
+        \end{enumerate}
+        \begin{description}
+            \item[Desc] This is description. 
+        \end{description}
+    \end{frame}
+    
+    \section{介绍}
+    \begin{frame}{介绍}
+        该 \LaTeXe{} \textsc{Beamer} 模板是我基于吴比师兄开例会时使用的 PPT 模板
+        制作而成. 基本布局和他的模板类似, 有一些其他的是我自己添加的, 比如说每
+        页下面的导航条, 日期和页码.
+
+        因为不清楚他的模板中的那个颜色的具体值, 所以在该版本中使用了黑色和灰色.
+        之后我会修正这个颜色.
+    \end{frame}
+    \section{使用方法}
+        \begin{frame}{使用方法}
+            在开始创建你的 Beamer 文档之前, 请将该模板所有的文件放到你的文件夹的根目录
+            里.
+            \begin{block}{模版文件}
+                \begin{itemize}
+                    \item beamerthemeTIMOZER.sty
+                    \item beamercolorthemeTIMOZER.sty
+                    \item beamerfontthemeTIMOZER.sty
+                    \item beamerinnerthemeTIMOZER.sty
+                    \item beamerouterthemeTIMOZER.sty
+                \end{itemize}
+            \end{block}
+            此外, 还有 Makefile, README.md, main.tex \ldots 等文件不是该模板的主要文件,
+            可以删除.
+        \end{frame}
+
+        \begin{frame}[fragile]{使用方法}
+            新建 Beamer 文档, 这里假设文档名字为 \texttt{demo.tex}.\\
+            接下来引入该模板, 如下:
+            \begin{minted}{tex}
+                \documentclass[no-math]{beamer}
+                \usepackage[UTF8, noindent]{ctexcap}
+                \usetheme{TIMOZER}
+                \title{三峡中心403例会幻灯片\TeX{}模板}
+                \subtitle{\LaTeXe{} Beamer 模板 \textsc{Version 0.1}}
+                \date{\today}
+                \author{王震宇\quad \texttt{zhenyuwang94@gmail.com}}
+                \institute{计算机学院}
+            \end{minted}
+        \end{frame}
+        \begin{frame}{使用方法}
+            正如你在代码中看到的, 除了使用文档类 \texttt{beamer}, 为了使用中文, 还得加载
+            \texttt{ctexcap} 宏包, 这个宏包为我们提供了中文支持, 并且将一些环境的名字也换成了
+            中文的.
+
+            接下来就是使用 \textsc{Timozer} 主题了.
+
+            最后输入你的题目, 如果有小标题, 也可以输入. 你的名字, 学院, 日期等等.
+            然后将你的主要内容放入 \texttt{document} 环境中.
+        
+        \end{frame}
+
+    \section{版本}
+        \begin{frame}{\textsc{Version 0.1}}
+            \begin{block}{Version 0.1}
+                2018年 2月 5日 星期一 12时32分51秒 CST
+            \end{block}
+        \end{frame}
+
+    \section{致谢}
+        \begin{frame}{致谢}
+            首先感谢吴比师兄为我提供 PPT 模板.
+        \end{frame}
+    \begin{frame}{大标题}
+        只有一个标题
+        内容是垂直居中的 \cite{Teney_2017_CVPR}
+    \end{frame}
+
+    \section{参考文献}
+    \begin{frame}{参考文献}
+        \bibliographystyle{apalike}
+        \bibliography{403beamer}
+    \end{frame}
+\end{document}

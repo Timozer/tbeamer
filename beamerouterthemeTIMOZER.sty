@@ -1,0 +1,88 @@
+% !TEX TS-program xelatex
+% !TEX encoding = UTF-8 Unicode
+% -*- coding: UTF-8; -*-
+% vim: set fenc=utf-8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  FileName: beamerouterthemeTIMOZER.sty
+%%  Author:   Timozer
+%%  E-mail:   zhenyuwang94@gmail.com
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\mode<presentation>
+
+\RequirePackage{graphicx}
+\RequirePackage{calc}
+\useoutertheme{default}
+% headline footline, sidebar, logo, frame title
+% beamercolorbox opts: wd={width}, dp={depth}
+% ht={height}, left, right, center,
+% leftskip=<dim>, rightskip=<dim>(0pt plus 4em)
+% sep=<dim>, shadow=(true or false)
+% rounded=(true or false)
+% one line, ht=2.25ex, dp=1ex
+% headline
+\defbeamertemplate*{headline}{TIMOZER}{%
+    \leavevmode%
+    \begin{beamercolorbox}[wd=\paperwidth, ht=1cm]{}
+        \begin{tikzpicture}
+            \useasboundingbox (0, 0) rectangle(\the\paperwidth, 1cm);
+            \node[anchor=west] at (0.3cm, 0.5cm) {\includegraphics[height=0.8cm]{./imgs/cuglogo.pdf}};
+            \node[anchor=west] at (1.3cm, 0.5cm) {\includegraphics[height=0.8cm]{./imgs/cug.pdf}};
+            \fill[black!50] (.4\paperwidth, 0) -- ++(1cm, 1cm) -- ++(1pt, 0) -- ++(-1cm, -1cm) -- (.4\paperwidth, 0) --cycle;
+            \fill[black!50] (.415\paperwidth, 0) -- ++(1cm, 1cm) -- ++(2pt, 0) -- ++(-1cm, -1cm) -- (.415\paperwidth, 0) --cycle;
+            \fill[black!50] (.4275\paperwidth, 0) ++(1cm, 1cm) -- (\paperwidth, 1cm) -- (\paperwidth, 0) --(.4275\paperwidth, 0) --cycle;
+            \draw[black!50, very thick] (0, 0) -- (\paperwidth, 0);
+%preaction={fill=black!20, opacity=.5,
+                    %transform canvas={xshift=0mm, yshift=-2.5mm}}
+        \end{tikzpicture}
+    \end{beamercolorbox}
+    \vskip0pt%
+}
+% footline
+\defbeamertemplate*{footline}{TIMOZER}{%
+    \leavevmode%
+    \begin{beamercolorbox}[wd=\paperwidth, ht=5.75ex]{footline}
+        \begin{tikzpicture}
+            %\useasboundingbox[fill=gray!40](0, 0) rectangle(\the\paperwidth, 5.75ex);
+            \useasboundingbox(0, 0) rectangle(\the\paperwidth, 5.75ex);
+            \node[anchor=west, font=\tiny] at (0em, 2.75ex){\insertsectionnavigationhorizontal{.85\paperwidth}{}{\hskip0pt}};
+            %\node[anchor=west, font=\tiny] at (-1em, 3ex){\insertnavigation{.85\paperwidth}};
+            \node[anchor=east, font=\tiny] at (\paperwidth, 4.05ex){\usebeamercolor{footline}\insertdate};
+            \node[anchor=east, font=\tiny] at (\paperwidth-1.25pt, 1.75ex){{\usebeamerfont{frame number}\usebeamercolor{footline}\usebeamertemplate{frame numbering}}};
+        \end{tikzpicture}
+    \end{beamercolorbox}
+    \vskip0pt%
+}
+% Frame title
+\defbeamertemplate*{frametitle}{TIMOZER}[1][]{%
+    \vskip-0.3pt
+    \begin{beamercolorbox}[wd=\paperwidth, ht=0.6cm]{frametitle}
+        \begin{tikzpicture}
+            \useasboundingbox (0, 0) rectangle(\the\paperwidth, 0.6cm);
+            \fill[black!20] (0, 0) -- (.4375\paperwidth, 0) -- ++(0.6cm, 0.6cm) -- (0, 0.6cm) --(0, 0) --cycle;
+            \node[anchor=west, white] at(0.5em, 1.325ex){\usebeamerfont{section title}\insertframetitle};
+        \end{tikzpicture}
+    \end{beamercolorbox}
+}
+% framenumbers
+\defbeamertemplate{frame numbering}{none}{}
+\defbeamertemplate{frame numbering}{counter}{\insertframenumber}
+\defbeamertemplate{frame numbering}{fraction}{\insertframenumber\ / \inserttotalframenumber}
+\defbeamertemplate{frame numbering}{appendix}{\appendixname}
+
+\setbeamertemplate{frame numbering}[fraction]
+
+% Navigation symbols 
+\defbeamertemplate*{navigation symbols}{TIMOZER}{%
+    \hbox{%
+        \hbox{\insertsectionnavigationsymbol}
+        \hbox{\insertbackfindforwardnavigationsymbol}
+    }
+}
+\defbeamertemplate*{sidebar right}{TIMOZER}{%
+    \vfill%
+    \llap{\usebeamertemplate***{navigation symbols}\hskip2pt}%
+    \vskip2pt%
+}
+\mode<all>
