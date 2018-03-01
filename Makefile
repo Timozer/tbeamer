@@ -7,9 +7,9 @@ target: $(OBJECTS)
 
 main.pdf: *.tex *.sty 
 	$(TEX) -shell-escape $<
-	#$(BIBTEX) main.aux
-	#$(TEX) -shell-escape $<
-	#$(TEX) -shell-escape $<
+	$(BIBTEX) main.aux
+	$(TEX) -shell-escape $<
+	$(TEX) -shell-escape $<
 	$(OPEN) $@
 
 

@@ -13,7 +13,9 @@
 
 \RequirePackage{graphicx}
 \RequirePackage{calc}
+\RequirePackage{xcolor}
 \useoutertheme{default}
+\usetikzlibrary{shadows, fadings}
 % headline footline, sidebar, logo, frame title
 % beamercolorbox opts: wd={width}, dp={depth}
 % ht={height}, left, right, center,
@@ -22,17 +24,23 @@
 % rounded=(true or false)
 % one line, ht=2.25ex, dp=1ex
 % headline
+
 \defbeamertemplate*{headline}{TIMOZER}{%
     \leavevmode%
     \begin{beamercolorbox}[wd=\paperwidth, ht=1cm]{}
         \begin{tikzpicture}
             \useasboundingbox (0, 0) rectangle(\the\paperwidth, 1cm);
+            \usebeamercolor{headline}
             \node[anchor=west] at (0.3cm, 0.5cm) {\includegraphics[height=0.8cm]{./imgs/cuglogo.pdf}};
             \node[anchor=west] at (1.3cm, 0.5cm) {\includegraphics[height=0.8cm]{./imgs/cug.pdf}};
-            \fill[black!50] (.4\paperwidth, 0) -- ++(1cm, 1cm) -- ++(1pt, 0) -- ++(-1cm, -1cm) -- (.4\paperwidth, 0) --cycle;
-            \fill[black!50] (.415\paperwidth, 0) -- ++(1cm, 1cm) -- ++(2pt, 0) -- ++(-1cm, -1cm) -- (.415\paperwidth, 0) --cycle;
-            \fill[black!50] (.4275\paperwidth, 0) ++(1cm, 1cm) -- (\paperwidth, 1cm) -- (\paperwidth, 0) --(.4275\paperwidth, 0) --cycle;
-            \draw[black!50, very thick] (0, 0) -- (\paperwidth, 0);
+            \fill[color=bg] (.4\paperwidth, 0) -- ++(1cm, 1cm) -- ++(1pt, 0) -- ++(-1cm, -1cm) -- (.4\paperwidth, 0) --cycle;
+            \fill[color=bg] (.415\paperwidth, 0) -- ++(1cm, 1cm) -- ++(2pt, 0) -- ++(-1cm, -1cm) -- (.415\paperwidth, 0) --cycle;
+            \fill[color=bg] (.4275\paperwidth, 0) ++(1cm, 1cm) -- (\paperwidth, 1cm) -- (\paperwidth, 0) --(.4275\paperwidth, 0) --cycle;
+            \fill[drop shadow={top color=gray,
+              bottom color=white,
+              shadow xshift=0,
+              shadow yshift=-1pt,
+              rounded corners },color=bg, very thick] (0, 1pt) -- (\paperwidth, 1pt) -- (\paperwidth, -1pt) -- (0, -1pt) --cycle;
 %preaction={fill=black!20, opacity=.5,
                     %transform canvas={xshift=0mm, yshift=-2.5mm}}
         \end{tikzpicture}
@@ -56,12 +64,13 @@
 }
 % Frame title
 \defbeamertemplate*{frametitle}{TIMOZER}[1][]{%
-    \vskip-0.3pt
-    \begin{beamercolorbox}[wd=\paperwidth, ht=0.6cm]{frametitle}
+    \vskip-0.33pt
+    \begin{beamercolorbox}[wd=\paperwidth, ht=0.6cm]{}
         \begin{tikzpicture}
             \useasboundingbox (0, 0) rectangle(\the\paperwidth, 0.6cm);
-            \fill[black!20] (0, 0) -- (.4375\paperwidth, 0) -- ++(0.6cm, 0.6cm) -- (0, 0.6cm) --(0, 0) --cycle;
-            \node[anchor=west, white] at(0.5em, 1.325ex){\usebeamerfont{section title}\insertframetitle};
+            \usebeamercolor{frametitle}
+            \fill[color=bg] (0, 0) -- (.4375\paperwidth, 0) -- ++(0.6cm, 0.6cm) -- (0, 0.6cm) --(0, 0) --cycle;
+            \node[anchor=west, white] at(0.5em, 1.325ex){\usebeamerfont{frametitle}\insertframetitle};
         \end{tikzpicture}
     \end{beamercolorbox}
 }

@@ -44,7 +44,8 @@
             \fi
         };
         % draw separation line
-        \draw[black, very thick] (current page.west) ++(2.2em, 0) -- (current page.east);
+        \usebeamercolor{separation line}
+        \draw[color=fg, very thick] (current page.west) ++(2.2em, 0) -- (current page.east);
         % draw author & institute(if) & date
         \draw (current page.west) ++(2em, -0.3em) node[anchor=north west,  align=left]%
         {
@@ -80,7 +81,8 @@
             % for subsection, \insertsubsectionnumber, \insertsubsection(for title)
         };
         % separation line
-        \draw[black, very thick] (current page.west) ++(2.2em, 0) -- (current page.east);
+        \usebeamercolor{separation line}
+        \draw[color=fg, very thick] (current page.west) ++(2.2em, 0) -- (current page.east);
     \end{tikzpicture}
 }
 

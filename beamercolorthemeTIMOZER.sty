@@ -12,61 +12,61 @@
 \mode<presentation>
 
 \RequirePackage{xcolor}
-%\usecolortheme{default}
+\usecolortheme{default}
+
+\definecolor{maincolor}{RGB}{128, 0, 0}
 
 \definecolor{Red}{RGB}{100, 29, 27}
 \definecolor{Green}{RGB}{166, 214, 35}
 \definecolor{Grey}{RGB}{80, 80, 80}
 \definecolor{Logo}{RGB}{255, 255, 255}
 
-\definecolor{myowncolor}{rgb}{0.2, 0.2, 0.7}
-
-\setbeamercolor{normal text}{fg=black, bg=white}
-\setbeamercolor{alerted text}{fg=red}
-\setbeamercolor{example text}{fg=green!50!black}
+%\setbeamercolor{normal text}{fg=black, bg=white}
+%\setbeamercolor{alerted text}{fg=red}
+%\setbeamercolor{example text}{fg=green!50!black}
 
 % the main ones
-\setbeamercolor{structure}{fg=myowncolor}
-\setbeamercolor{palette primary}{use=structure, fg=structure.fg}
-\setbeamercolor{palette secondary}{use=structure, fg=structure.fg!75!black}
-\setbeamercolor{palette tertiary}{use=structure, fg=structure.fg!50!black}
-\setbeamercolor{palette quaternary}{fg=black}
+%\setbeamercolor{structure}{fg=maincolor}
+%\setbeamercolor{palette primary}{use=structure, fg=structure.fg}
+%\setbeamercolor{palette secondary}{use=structure, fg=structure.fg!75!black}
+%\setbeamercolor{palette tertiary}{use=structure, fg=structure.fg!50!black}
+%\setbeamercolor{palette quaternary}{fg=black}
 
 % for background 
-\setbeamercolor{background canvas}{parent=normal text}
-\setbeamercolor{background}{parent=background canvas}
+%\setbeamercolor{background canvas}{parent=normal text}
+%\setbeamercolor{background}{parent=background canvas}
 
 % for math text
-\setbeamercolor{math text}{}
-\setbeamercolor{math text inlined}{parent=math text}
-\setbeamercolor{math text displayed}{parent=math text}
-\setbeamercolor{normal text in math text}{}
+%\setbeamercolor{math text}{}
+%\setbeamercolor{math text inlined}{parent=math text}
+%\setbeamercolor{math text displayed}{parent=math text}
+%\setbeamercolor{normal text in math text}{}
 
 % local structure 
-\setbeamercolor{local structure}{parent=structure}
+%\setbeamercolor{local structure}{parent=structure}
 
 % titles
-\setbeamercolor{titlelike}{parent=structure}
-\setbeamercolor{title}{parent=titlelike}
-\setbeamercolor{title in head/foot}{parent=palette quaternary}
-\setbeamercolor{subtitle}{parent=title}
+%\setbeamercolor{titlelike}{parent=structure}
+%\setbeamercolor{title}{parent=titlelike}
+%\setbeamercolor{title in head/foot}{parent=palette quaternary}
+%\setbeamercolor{subtitle}{parent=title}
 
 %\setbeamercolor{title in sidebar}{parent=palette sidebar quaternary}
 
 % authors
-\setbeamercolor{author}{}
-\setbeamercolor{author in head/foot}{parent=palette primary}
+%\setbeamercolor{author}{}
+%\setbeamercolor{author in head/foot}{parent=palette primary}
 %\setbeamercolor{author in sidebar}{use=palette sidebar tertiary, fg=palette sidebar tertiary.fg}
 
 % institute
-\setbeamercolor{institute}{}
-\setbeamercolor{institute in head/foot}{parent=palette tertiary}
-\setbeamercolor{institute in sidebar}{use=palette sidebar tertiary, fg=palette sidebar tertiary.fg}
+%\setbeamercolor{institute}{}
+%\setbeamercolor{institute in head/foot}{parent=palette tertiary}
+%\setbeamercolor{institute in sidebar}{use=palette sidebar tertiary, fg=palette sidebar tertiary.fg}
 
 % date
-\setbeamercolor{date}{} 
-\setbeamercolor{date in head/foot}{parent=palette secondary}
-\setbeamercolor{date in sidebar}{use=palette sidebar tertiary, fg=palette sidebar tertiary.fg}
+%\setbeamercolor{date}{} 
+\setbeamercolor{date in head/foot}{fg=white}
+%\setbeamercolor{date in sidebar}{use=palette sidebar tertiary, fg=palette sidebar tertiary.fg}
 
 % titlegraphic
 %\setbeamercolor{titlegraphic}{}
@@ -74,9 +74,9 @@
 % part name, part title
 
 % section
-\setbeamercolor{section name}{}
-\setbeamercolor{section title}{parent=titlelike}
-\setbeamercolor{section in head/foot}{fg=black}
+%\setbeamercolor{section name}{}
+%\setbeamercolor{section title}{parent=titlelike}
+\setbeamercolor{section in head/foot}{fg=white}
 % subsection name, subsection title, subsection in head/foot
 % subsection in sidebar, subsection in sidebar shaded
 % subsubsection in sidebar, subsubsection in sidebar shaded
@@ -86,26 +86,26 @@
 % The color of table of contents
 \setbeamercolor*{section in toc}{fg=black} %背景色没意义, 为啥? 
 %\setbeamercolor*{section in toc shaded}{bg=black, fg=orange}
-\setbeamercolor*{section number projected}{fg=white, bg=black}
+\setbeamercolor*{section number projected}{fg=white, bg=maincolor}
 \setbeamercolor*{subsection in toc}{fg=black} %背景色没意义, 为啥? 
 %\setbeamercolor*{subsection in toc shaded}{bg=black, fg=orange}
-\setbeamercolor*{subsection number projected}{fg=white, bg=black}
+\setbeamercolor*{subsection number projected}{fg=white, bg=maincolor}
 \setbeamercolor*{subsubsection in toc}{fg=black} %背景色没意义, 为啥? 
 %\setbeamercolor*{subsubsection in toc shaded}{bg=black, fg=orange}
-\setbeamercolor*{subsubsection number projected}{fg=white, bg=black}
+\setbeamercolor*{subsubsection number projected}{fg=white, bg=maincolor}
 
 % headline, foot line
-\setbeamercolor{headline}{}
-\setbeamercolor{footline}{fg=black, bg=gray!20}
+\setbeamercolor{headline}{bg=maincolor}
+\setbeamercolor{footline}{fg=white, bg=maincolor}
 
 % sidebar
-\setbeamercolor{sidebar}{}
-\setbeamercolor{sidebar left}{parent=sidebar}
-\setbeamercolor{sidebar right}{parent=sidebar}
+%\setbeamercolor{sidebar}{}
+%\setbeamercolor{sidebar left}{parent=sidebar}
+%\setbeamercolor{sidebar right}{parent=sidebar}
 
 % logo
 % frametitle
-\setbeamercolor{frametitle}{parent=titlelike}
+\setbeamercolor{frametitle}{fg=white, bg=maincolor}
 \setbeamercolor{framesubtitle}{parent=frametitle}
 \setbeamercolor{frametitle right}{parent=frametitle}
 
@@ -117,13 +117,13 @@
 % button, button border
 
 % navigation symbols 
-\setbeamercolor{navigation symbols}{fg=black, bg=gray!20}
-\setbeamercolor{navigation symbols dimmed}{fg=gray!20, bg=white}
+\setbeamercolor{navigation symbols}{fg=maincolor}
+\setbeamercolor{navigation symbols dimmed}{fg=maincolor!20}
 
 % mini frame
 % block title alerted, block body alerted
 % block title example, block body example
-\setbeamercolor*{block title}{fg = white, bg=black}
+\setbeamercolor*{block title}{fg = white, bg=maincolor}
 \setbeamercolor*{block body}{fg = black, bg = gray!20}
 
 % itemize/enumrate(body, subbody, subsubbody), description body
@@ -148,7 +148,7 @@
 \setbeamercolor*{bibliography entry location}{fg=black}
 \setbeamercolor*{bibliography entry note}{fg=black}
 
-\setbeamercolor{separation line}{}
+\setbeamercolor{separation line}{fg=maincolor}
 % (upper, middle, lower) separation line head
 % (upper, middle, lower) separation line foot
 
@@ -160,7 +160,7 @@
 % quotation, quote
 %qed symbol
 
-\setbeamercolor{page number in head/foot}{fg=black}
+\setbeamercolor{page number in head/foot}{fg=white}
 
 % note page, note title, note date
 \mode<all>
