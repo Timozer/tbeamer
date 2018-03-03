@@ -13,8 +13,8 @@ _minted-demo
 _minted-cache
 *bbl
 *blg
-imgs
 *.nav
 *.snm
 default
+path.tex
 

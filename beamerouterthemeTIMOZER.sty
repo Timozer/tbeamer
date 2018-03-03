@@ -31,18 +31,20 @@
         \begin{tikzpicture}
             \useasboundingbox (0, 0) rectangle(\the\paperwidth, 1cm);
             \usebeamercolor{headline}
-            \node[anchor=west] at (0.3cm, 0.5cm) {\includegraphics[height=0.8cm]{./imgs/cuglogo.pdf}};
+            %\node[anchor=west] at (0.3cm, 0.5cm) {\includegraphics[height=0.8cm]{./imgs/cuglogo.pdf}};
+            \usebeamertemplate{logo}
+            \node[anchor=west] at (.3cm, 0.5cm) {\includegraphics[height=0.8cm]{./imgs/cuglogo.pdf}};
             \node[anchor=west] at (1.3cm, 0.5cm) {\includegraphics[height=0.8cm]{./imgs/cug.pdf}};
             \fill[color=bg] (.4\paperwidth, 0) -- ++(1cm, 1cm) -- ++(1pt, 0) -- ++(-1cm, -1cm) -- (.4\paperwidth, 0) --cycle;
             \fill[color=bg] (.415\paperwidth, 0) -- ++(1cm, 1cm) -- ++(2pt, 0) -- ++(-1cm, -1cm) -- (.415\paperwidth, 0) --cycle;
             \fill[color=bg] (.4275\paperwidth, 0) ++(1cm, 1cm) -- (\paperwidth, 1cm) -- (\paperwidth, 0) --(.4275\paperwidth, 0) --cycle;
-            \fill[drop shadow={top color=gray,
+            \fill[drop shadow={top color=gray!80,
               bottom color=white,
               shadow xshift=0,
               shadow yshift=-1pt,
               rounded corners },color=bg, very thick] (0, 1pt) -- (\paperwidth, 1pt) -- (\paperwidth, -1pt) -- (0, -1pt) --cycle;
-%preaction={fill=black!20, opacity=.5,
-                    %transform canvas={xshift=0mm, yshift=-2.5mm}}
+                %preaction={fill=black!20, opacity=.5,
+                %transform canvas={xshift=0mm, yshift=-2.5mm}}
         \end{tikzpicture}
     \end{beamercolorbox}
     \vskip0pt%
@@ -94,4 +96,236 @@
     \llap{\usebeamertemplate***{navigation symbols}\hskip2pt}%
     \vskip2pt%
 }
+
+
+%\defbeamertemplate{logo}{TIMOZER}{%
+    %\begin{tikzpicture}[remember picture, overla,y=0.80pt, x=0.80pt, yscale=-1.000000, xscale=1.000000, inner sep=0pt, outer sep=0pt]
+        %\begin{scope}[cm={{1.33333,0.0,0.0,-1.33333,(0.0,744.0)}}]
+            %\begin{scope}[scale=0.100]
+                %\usebeamercolor{headline}
+                %\path[draw=bg,line join=round,line cap=butt,miter limit=10.00,line
+                %width=62.400pt] (4988.0000,2790.0000) .. controls (4988.0000,3372.9700) and
+                %(4756.3800,3932.0000) .. (4344.1900,4344.1900) .. controls
+                %(3932.0000,4756.3800) and (3372.9700,4988.0000) .. (2790.0000,4988.0000) ..
+                %controls (2207.0300,4988.0000) and (1648.0000,4756.3800) ..
+                %(1235.8100,4344.1900) .. controls (823.6210,3932.0000) and
+                %(592.0000,3372.9700) .. (592.0000,2790.0000) .. controls (592.0000,2207.0300)
+                %and (823.6210,1648.0000) .. (1235.8100,1235.8100) .. controls
+                %(1648.0000,823.6210) and (2207.0300,592.0000) .. (2790.0000,592.0000) ..
+                %controls (3372.9700,592.0000) and (3932.0000,823.6210) ..
+                %(4344.1900,1235.8100) .. controls (4756.3800,1648.0000) and
+                %(4988.0000,2207.0300) .. (4988.0000,2790.0000) -- cycle;
+                %\path[draw=bg,line join=round,line cap=butt,miter limit=10.00,line
+                %width=62.400pt] (5540.0000,2790.0000) .. controls (5540.0000,3519.3800) and
+                %(5250.2100,4218.8000) .. (4734.5000,4734.5000) .. controls
+                %(4218.8000,5250.2100) and (3519.3800,5540.0000) .. (2790.0000,5540.0000) ..
+                %controls (2060.6200,5540.0000) and (1361.2100,5250.2100) ..
+                %(845.4960,4734.5000) .. controls (329.7890,4218.8000) and (40.0000,3519.3800)
+                %.. (40.0000,2790.0000) .. controls (40.0000,2060.6200) and
+                %(329.7890,1361.2100) .. (845.4960,845.4960) .. controls (1361.2100,329.7890)
+                %and (2060.6200,40.0000) .. (2790.0000,40.0000) .. controls (3519.3800,40.0000)
+                %and (4218.8000,329.7890) .. (4734.5000,845.4960) .. controls
+                %(5250.2100,1361.2100) and (5540.0000,2060.6200) .. (5540.0000,2790.0000) --
+                %cycle;
+                %\path[draw=bg,line join=round,line cap=butt,miter limit=10.00,line
+                %width=62.400pt] (4243.0000,2790.0000) .. controls (4243.0000,3175.3800) and
+                %(4089.8900,3544.9200) .. (3817.4100,3817.4100) .. controls
+                %(3544.9200,4089.8900) and (3175.3800,4243.0000) .. (2790.0000,4243.0000) ..
+                %controls (2404.6300,4243.0000) and (2035.0800,4089.8900) ..
+                %(1762.5900,3817.4100) .. controls (1490.1100,3544.9200) and
+                %(1337.0000,3175.3800) .. (1337.0000,2790.0000) .. controls
+                %(1337.0000,2404.6300) and (1490.1100,2035.0800) .. (1762.5900,1762.5900) ..
+                %controls (2035.0800,1490.1100) and (2404.6300,1337.0000) ..
+                %(2790.0000,1337.0000) .. controls (3175.3800,1337.0000) and
+                %(3544.9200,1490.1100) .. (3817.4100,1762.5900) .. controls
+                %(4089.8900,2035.0800) and (4243.0000,2404.6300) .. (4243.0000,2790.0000) --
+                %cycle;
+                %\path[draw=bg,line join=round,line cap=round,miter limit=10.00,line
+                %width=62.400pt] (4243.0000,2790.0000) -- (4988.0000,2790.0000);
+                %\path[draw=bg,line join=round,line cap=round,miter limit=10.00,line
+                %width=62.400pt] (1337.0000,2790.0000) -- (592.0000,2790.0000);
+                %\path[draw=bg,line join=round,line cap=round,miter limit=10.00,line
+                %width=62.400pt] (2790.0000,4525.0000) -- (2790.0000,4243.0000);
+                %\path[draw=bg,line join=round,line cap=round,miter limit=10.00,line
+                %width=62.400pt] (2790.0000,1055.0000) -- (2790.0000,1337.0000);
+                %\path[fill=bg,nonzero rule] (2790.0000,2994.0000) -- (2790.0000,2790.0000) --
+                %(1337.0000,2790.0000);
+                %\path[fill=bg,nonzero rule] (2790.0000,2586.0000) -- (2790.0000,2790.0000) --
+                %(4243.0000,2790.0000);
+                %\path[draw=bg,line join=round,line cap=round,miter limit=10.00,line
+                %width=62.400pt] (2790.0000,2994.0000) -- (4243.0000,2790.0000) --
+                %(2790.0000,2586.0000) -- (1337.0000,2790.0000) -- (2790.0000,2994.0000);
+                %\path[draw=bg,line join=round,line cap=round,miter limit=10.00,line
+                %width=32.000pt] (4243.0000,2790.0000) -- (1337.0000,2790.0000);
+                %\path[fill=bg,nonzero rule] (3835.0000,3601.0000) .. controls
+                %(3623.9100,3639.5400) and (3408.3800,3647.6200) .. (3195.0000,3625.0000) ..
+                %controls (3108.1700,3615.8000) and (3021.5300,3601.4200) ..
+                %(2940.0000,3570.0000) .. controls (2917.6500,3561.3900) and
+                %(2895.0000,3547.9000) .. (2895.0000,3525.0000) -- (2895.0000,1470.0000) --
+                %(2685.0000,1470.0000) -- (2685.0000,3525.0000) .. controls
+      %(2685.0000,3547.8900) and (2662.3400,3561.3700) .. (2640.0000,3570.0000) ..
+      %controls (2528.8200,3612.9300) and (2409.0800,3625.0000) ..
+      %(2290.0000,3625.0000) -- (1933.0000,3625.0000) -- (1933.0000,3829.0000) ..
+      %controls (2214.7400,3888.8400) and (2501.9800,3919.0000) ..
+      %(2790.0000,3919.0000) .. controls (3162.1600,3919.0000) and
+      %(3525.9200,3808.3100) .. (3835.0000,3601.0000);
+    %\path[draw=bg,line join=round,line cap=round,miter limit=10.00,line
+      %width=32.000pt] (3835.0000,3601.0000) .. controls (3623.9100,3639.5400) and
+      %(3408.3800,3647.6200) .. (3195.0000,3625.0000) .. controls
+      %(3108.1700,3615.8000) and (3021.5300,3601.4200) .. (2940.0000,3570.0000) ..
+      %controls (2917.6500,3561.3900) and (2895.0000,3547.9000) ..
+      %(2895.0000,3525.0000) -- (2895.0000,1470.0000) -- (2685.0000,1470.0000) --
+      %(2685.0000,3525.0000) .. controls (2685.0000,3547.8900) and
+      %(2662.3400,3561.3700) .. (2640.0000,3570.0000) .. controls
+      %(2528.8200,3612.9300) and (2409.0800,3625.0000) .. (2290.0000,3625.0000) --
+      %(1933.0000,3625.0000) -- (1933.0000,3829.0000) .. controls
+      %(2214.7400,3888.8400) and (2501.9800,3919.0000) .. (2790.0000,3919.0000) ..
+      %controls (3162.1600,3919.0000) and (3525.9200,3808.3100) ..
+      %(3835.0000,3601.0000);
+    %\path[draw=bg,line join=miter,line cap=round,miter limit=10.00,line
+      %width=62.400pt] (3570.0000,4670.0000) .. controls (3877.2600,4385.8900) and
+      %(4120.9300,4039.9800) .. (4285.0000,3655.0000) .. controls
+      %(4401.9600,3380.5700) and (4477.0000,3088.4600) .. (4477.0000,2790.0000);
+    %\path[draw=bg,line join=miter,line cap=round,miter limit=10.00,line
+      %width=62.400pt] (2010.0000,4670.0000) .. controls (1702.7400,4385.8900) and
+      %(1459.0700,4039.9800) .. (1295.0000,3655.0000) .. controls
+      %(1178.0400,3380.5700) and (1103.0000,3088.4600) .. (1103.0000,2790.0000);
+    %\path[draw=bg,line join=miter,line cap=round,miter limit=10.00,line
+      %width=62.400pt] (2010.0000,910.0000) .. controls (1702.7400,1194.1100) and
+      %(1459.0700,1540.0200) .. (1295.0000,1925.0000) .. controls
+      %(1178.0400,2199.4300) and (1103.0000,2491.5400) .. (1103.0000,2790.0000);
+    %\path[draw=bg,line join=miter,line cap=round,miter limit=10.00,line
+      %width=62.400pt] (3570.0000,910.0000) .. controls (3877.2600,1194.1100) and
+      %(4120.9300,1540.0200) .. (4285.0000,1925.0000) .. controls
+      %(4401.9600,2199.4300) and (4477.0000,2491.5400) .. (4477.0000,2790.0000);
+    %\path[draw=bg,line join=miter,line cap=round,miter limit=10.00,line
+      %width=62.400pt] (4045.0000,3547.0000) .. controls (4126.1900,3580.2900) and
+      %(4206.2400,3616.3100) .. (4285.0000,3655.0000) .. controls
+      %(4423.3900,3722.9800) and (4557.6300,3799.1200) .. (4687.0000,3883.0000);
+    %\path[draw=bg,line join=miter,line cap=round,miter limit=10.00,line
+      %width=62.400pt] (1535.0000,3547.0000) .. controls (1453.8100,3580.2900) and
+      %(1373.7600,3616.3100) .. (1295.0000,3655.0000) .. controls
+      %(1156.6100,3722.9800) and (1022.3800,3799.1200) .. (893.0000,3883.0000);
+    %\path[draw=bg,line join=miter,line cap=round,miter limit=10.00,line
+      %width=62.400pt] (1535.0000,2033.0000) .. controls (1453.8100,1999.7100) and
+      %(1373.7600,1963.6900) .. (1295.0000,1925.0000) .. controls
+      %(1156.6100,1857.0200) and (1022.3800,1780.8800) .. (893.0000,1697.0000);
+    %\path[draw=bg,line join=miter,line cap=round,miter limit=10.00,line
+      %width=62.400pt] (4045.0000,2033.0000) .. controls (4126.1900,1999.7100) and
+      %(4206.2400,1963.6900) .. (4285.0000,1925.0000) .. controls
+      %(4423.3900,1857.0200) and (4557.6300,1780.8800) .. (4687.0000,1697.0000);
+    %\path[draw=bg,line join=miter,line cap=round,miter limit=10.00,line
+      %width=62.400pt] (2790.0000,4525.0000) .. controls (2951.3100,4528.4000) and
+      %(3111.9700,4546.4700) .. (3270.0000,4579.0000) .. controls
+      %(3372.6400,4600.1300) and (3474.2200,4627.3900) .. (3570.0000,4670.0000) ..
+      %controls (3631.5400,4697.3800) and (3690.1700,4730.8800) ..
+      %(3745.0000,4770.0000);
+    %\path[draw=bg,line join=miter,line cap=round,miter limit=10.00,line
+      %width=62.400pt] (2790.0000,4525.0000) .. controls (2628.7000,4528.4000) and
+      %(2468.0300,4546.4700) .. (2310.0000,4579.0000) .. controls
+      %(2207.3600,4600.1300) and (2105.7800,4627.3900) .. (2010.0000,4670.0000) ..
+      %controls (1948.4600,4697.3800) and (1889.8300,4730.8800) ..
+      %(1835.0000,4770.0000);
+    %\path[draw=bg,line join=miter,line cap=round,miter limit=10.00,line
+      %width=62.400pt] (2790.0000,1055.0000) .. controls (2628.7000,1051.6000) and
+      %(2468.0300,1033.5300) .. (2310.0000,1001.0000) .. controls
+      %(2207.3600,979.8750) and (2105.7800,952.6050) .. (2010.0000,910.0000) ..
+      %controls (1948.4600,882.6250) and (1889.8300,849.1250) ..
+      %(1835.0000,810.0000);
+    %\path[draw=bg,line join=miter,line cap=round,miter limit=10.00,line
+      %width=62.400pt] (2790.0000,1055.0000) .. controls (2951.3100,1051.6000) and
+      %(3111.9700,1033.5300) .. (3270.0000,1001.0000) .. controls
+      %(3372.6400,979.8750) and (3474.2200,952.6050) .. (3570.0000,910.0000) ..
+      %controls (3631.5400,882.6250) and (3690.1700,849.1250) ..
+      %(3745.0000,810.0000);
+    %\path[draw=bg,line join=miter,line cap=round,miter limit=10.00,line
+      %width=62.400pt] (3270.0000,4579.0000) .. controls (3453.2300,4375.5000) and
+      %(3606.4500,4146.8500) .. (3725.0000,3900.0000);
+    %\path[draw=bg,line join=miter,line cap=round,miter limit=10.00,line
+      %width=62.400pt] (2310.0000,4579.0000) .. controls (2126.7700,4375.5000) and
+      %(1973.5500,4146.8500) .. (1855.0000,3900.0000);
+    %\path[draw=bg,line join=miter,line cap=round,miter limit=10.00,line
+      %width=62.400pt] (2310.0000,1001.0000) .. controls (2126.7700,1204.5000) and
+      %(1973.5500,1433.1500) .. (1855.0000,1680.0000);
+    %\path[draw=bg,line join=miter,line cap=round,miter limit=10.00,line
+      %width=62.400pt] (3270.0000,1001.0000) .. controls (3453.2300,1204.5000) and
+      %(3606.4500,1433.1500) .. (3725.0000,1680.0000);
+    %\begin{scope}[scale=10.000]
+        %\usebeamercolor{headline}
+        %\path[cm={{0.72773,0.93145,0.46572,-0.36386,(77.0,397.0)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text84) {中};
+        %\path[cm={{0.9545,0.59643,0.29821,-0.47725,(124.0,457.0)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text88) {国};
+        %\path[cm={{0.99115,0.26558,0.13278,-0.49557,(197.0,494.0)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text92) {地};
+        %\path[cm={{0.99115,-0.26558,-0.13278,-0.49557,(287.0,517.0)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text96) {质};
+        %\path[cm={{0.9545,-0.59643,-0.29821,-0.47725,(364.0,498.0)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text100) {大};
+        %\path[cm={{0.72773,-0.93145,-0.46572,-0.36386,(434.0,459.0)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text104) {学};
+        %\path[cm={{-0.23918,-0.97097,-0.97097,0.23918,(26.4984,359.699)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text108) {C};
+        %\path[cm={{-0.096,-0.99538,-0.99538,0.096,(16.9258,322.338)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text112) {H};
+        %\path[cm={{0.0045,-0.99999,-0.99999,-0.0045,(13.3922,284.742)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text116) {I};
+        %\path[cm={{0.1049,-0.99448,-0.99448,-0.1049,(13.5547,269.071)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text120) {N};
+        %\path[cm={{0.24779,-0.96881,-0.96881,-0.24779,(17.791,230.738)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text124) {A};
+        %\path[cm={{0.43647,-0.89972,-0.89972,-0.43647,(33.2082,179.735)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text128) {U};
+        %\path[cm={{0.56211,-0.82706,-0.82706,-0.56211,(49.7184,144.88)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text132) {N};
+        %\path[cm={{0.64238,-0.76639,-0.76639,-0.64238,(71.0195,113.702)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text136) {I};
+        %\path[cm={{0.71224,-0.70193,-0.70193,-0.71224,(81.0863,101.82)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text140) {V};
+        %\path[cm={{0.79976,-0.60031,-0.60031,-0.79976,(106.58,76.925)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text144) {E};
+        %\path[cm={{0.87561,-0.48302,-0.48302,-0.87561,(135.265,55.6152)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text148) {R};
+        %\path[cm={{0.93439,-0.35625,-0.35625,-0.93439,(169.23,37.7043)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text152) {S};
+        %\path[cm={{0.96398,-0.26598,-0.26598,-0.96398,(201.696,24.8246)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text156) {I};
+        %\path[cm={{0.9839,-0.17874,-0.17874,-0.9839,(216.629,20.7797)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text160) {T};
+        %\path[cm={{0.9987,-0.05101,-0.05101,-0.9987,(248.877,15.0734)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text164) {Y};
+        %\path[cm={{0.98873,0.1497,0.1497,-0.98873,(299.434,14.7145)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text168) {O};
+        %\path[cm={{0.95823,0.28601,0.28601,-0.95823,(340.273,20.5207)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text172) {F};
+        %\path[cm={{0.88433,0.46687,0.46687,-0.88433,(385.313,36.1812)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text176) {G};
+        %\path[cm={{0.80734,0.59008,0.59008,-0.80734,(422.045,55.1691)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text180) {E};
+        %\path[cm={{0.7133,0.70085,0.70085,-0.7133,(450.477,76.8621)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text184) {O};
+        %\path[cm={{0.60424,0.7968,0.7968,-0.60424,(479.784,105.918)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text188) {S};
+        %\path[cm={{0.48734,0.87321,0.87321,-0.48734,(501.193,134.434)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text192) {C};
+        %\path[cm={{0.39707,0.91779,0.91779,-0.39707,(519.995,167.185)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text196) {I};
+        %\path[cm={{0.30815,0.95134,0.95134,-0.30815,(526.103,181.509)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text200) {E};
+      %\path[cm={{0.1726,0.98499,0.98499,-0.1726,(536.946,215.558)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text204) {N};
+      %\path[cm={{0.02809,0.9996,0.9996,-0.02809,(542.864,253.594)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text208) {C};
+      %\path[cm={{-0.1114,0.99378,0.99378,0.1114,(544.318,292.035)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text212) {E};
+      %\path[cm={{-0.2434,0.96993,0.96993,0.2434,(539.652,327.292)}},fill=bg,nonzero
+        %rule] (0.0000,0.0000) node[above right] (text216) {S};
+      %\path[cm={{1.0,0.0,0.0,-0.6,(247.0,74.0)}},fill=bg,nonzero rule]
+        %(0.0000,0.0000) node[above right] (text220) {1952};
+  %\end{scope}
+  %\end{scope}
+%\end{scope}
+
+%\end{tikzpicture}
+%}
 \mode<all>
