@@ -76,7 +76,39 @@
 
             最后输入你的题目, 如果有小标题, 也可以输入. 你的名字, 学院, 日期等等.
             然后将你的主要内容放入 \texttt{document} 环境中.
-        
+        \end{frame}
+        \begin{frame}[fragile]{使用方法}
+            接下来添加标题页和目录页:
+            \begin{minted}{tex}
+                \begin{document}
+                \begin{frame}
+                    \titlepage
+                \end{tframe}
+                \begin{frame}{目录}
+                    \tableofcontents
+                \end{tframe}
+                \end{document}
+            \end{minted}
+            然后就可以开始写你的报告内容了. 
+
+            {\small 注: 请将 \texttt{tframe} 换成 \texttt{frame}, 为什么会出现这个问题, 我也不知道.}
+        \end{frame}
+        \begin{frame}[fragile]{使用方法}
+            请使用 \verb|\section{sectiontile}| 来开始新的一节, 这样就可以在目录中添加链接,
+            并且自动插入一个新的节页面.
+
+            在每一节中的每一帧, 你都需要自己手动将该节的标题写入. 否则, 那一帧将没有标题.
+
+            如果在某一帧中你需要插入代码, 请添加 \verb|fragile| 选项.
+            \begin{minted}{tex}
+                \section{使用方法}
+                \begin{frame}[fragile]{使用方法}
+                \begin{minted}{cpp}
+                    int main(){
+                        printf("Hello world.");
+                    }
+                \end{tminted}
+            \end{minted}
         \end{frame}
 
     \section{版本}
@@ -88,16 +120,37 @@
 
     \section{致谢}
         \begin{frame}{致谢}
-            首先感谢吴比师兄为我提供 PPT 模板.
+            首先感谢 Beamer 文档类的作者. 
+
+            其次是 BeamerUserGuide 和 Beamer v3.0 Guide \cite{Tantau2016, Kim2004}等文档的作者.
+
+            最后感谢吴比师兄为我提供 PPT 模板.
         \end{frame}
-    \begin{frame}{大标题}
-        只有一个标题
-        内容是垂直居中的 \cite{Teney_2017_CVPR}
+    \section{LICENSE}
+    \begin{frame}{LICENSE}
+        中国地质大学(武汉)三峡中心 403 例会 \TeX{} 模板.
+
+        {\small 
+        Copyright © 2018 Timozer <zhenyuwang94@gmail.com>
+
+        This program is free software: you can redistribute it and/or modify
+        it under the terms of the GNU General Public License as published by
+        the Free Software Foundation, either version 3 of the License, or
+        (at your option) any later version.
+
+        This program is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        GNU General Public License for more details.
+
+        You should have received a copy of the GNU General Public License
+        along with this program.  If not, see <http://www.gnu.org/licenses/>.
+        }
     \end{frame}
 
     \section{参考文献}
     \begin{frame}{参考文献}
         \bibliographystyle{apalike}
-        \bibliography{403beamer}
+        \bibliography{beamer}
     \end{frame}
 \end{document}
