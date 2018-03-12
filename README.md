@@ -1,4 +1,4 @@
-[![NuGet version](https://badge.fury.io/nu/https%2F%2Fgithub.com%2FTimozer%2Ftbeamer.svg)](https://badge.fury.io/nu/https%2F%2Fgithub.com%2FTimozer%2Ftbeamer)
+
 
 # tbeamer
 
