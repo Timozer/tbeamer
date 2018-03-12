@@ -1,5 +1,6 @@
 
 
+[![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg)](https//github.com/Timozer/tbeamer)
 # tbeamer
 
 2018年 3月 1日 星期四 22时28分43秒 CST
