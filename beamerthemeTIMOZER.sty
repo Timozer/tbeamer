@@ -17,9 +17,50 @@
 %\RequirePackage{appendixnumberbeamer} % Stops frame counting when the \appendix cmd is used
 \RequirePackage{etoolbox}
 \RequirePackage{tikz}
-\RequirePackage{timozerfont}
+%\RequirePackage{timozerfont}
 \RequirePackage{timozercode}
+\RequirePackage{nn}
+\RequirePackage[autoplay, autopause, autoresume]{animate}
 
+\usetikzlibrary{angles, quotes}
+\usetikzlibrary{%
+    arrows, %
+    calc, %
+    fit, %
+    patterns, %
+    plotmarks, %
+    shapes.geometric, %
+    shapes.misc, %
+    shapes.symbols, %
+    shapes.arrows, %
+    shapes.callouts, %
+    shapes.multipart, %
+    shapes.gates.logic.US, %
+    shapes.gates.logic.IEC, %
+    er, %
+    automata, %
+    backgrounds, %
+    chains, %
+    topaths, %
+    trees, %
+    petri, %
+    mindmap, %
+    matrix, %
+    calendar, %
+    folding, %
+    fadings, %
+    through, %
+    positioning, %
+    scopes, %
+    decorations.fractals, %
+    decorations.shapes, %
+    decorations.text, %
+    decorations.pathmorphing, %
+    decorations.pathreplacing, %
+    decorations.footprints, %
+    decorations.markings, %
+    shadows%
+    }
 % Defines
 \newcounter{lastframe}
 
@@ -101,4 +142,13 @@
     %\setbeamertemplate{frame numbering}[appendix]
     %}{}{}
 %}
+
+\def\mathfamilydefault{\rmdefault}
+\setbeamertemplate{caption}[numbered]
+\newcommand{\email}[1]{{\small \texttt{#1}}}
+\newcommand{\tthanks}{
+    \begin{center}
+        {\LARGE 谢谢}
+    \end{center}
+}
 \mode<all>
