@@ -18,7 +18,12 @@
 
 \NewDocumentCommand{\tilcode}{m}{\colorbox{lightgray!50}{\ttfamily\small #1}}
 \NewDocumentCommand{\cmd}{m}{\texttt{\small $\backslash$#1}}
-\NewDocumentCommand{\email}{m}{\texttt{\small $\backslash$#1}}
+\NewDocumentCommand{\email}{m}{{\small \texttt{#1}}}
+\NewDocumentCommand{\tthanks}{}{
+    \begin{center}
+        {\LARGE 谢谢}
+    \end{center}
+}
 
 \NewDocumentEnvironment{ttab}{m m}{%
     \begin{table}[htbp]

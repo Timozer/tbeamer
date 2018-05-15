@@ -27,23 +27,27 @@
 %\newCJKfontfamily[SmallCaps]\SCF{SmallCaps.otf}
 
 %%------------- Chinese Fonts  -------------
-%\setCJKmainfont[ 
-        %BoldFont = Hiragino Sans GB W6, ItalicFont = STKaiti
-    %]{FZShuSong-Z01S}
-%\setCJKsansfont[
-    %BoldFont = Hiragino Sans GB, 
-    %SmallCapsFont={Fontin SmallCaps},
-    %]{Hiragino Sans GB}
-%\setCJKmonofont{FZShuSong-Z01S}
-
+\setCJKmainfont[ 
+        BoldFont = SourceHanSerifSC-Bold, 
+        ItalicFont = STKaiti,
+        %BoldItalicFont = STKaiti-SC-Bold,
+    ]{SourceHanSerifSC-Regular}
+\setCJKsansfont[
+    BoldFont = SourceHanSansSC-Bold, 
+    ]{SourceHanSansSC-Regular}
+\setCJKmonofont[
+    BoldFont = SourceHanSansSC-Bold, 
+    ]{SourceHanSansSC-Regular}
 %%------------- English Fonts  -------------
-%\setmainfont[
-    %ItalicFont = {Times New Roman Italic},
-    %BoldFont = {Times New Roman Bold},
-    %SmallCapsFont={Fontin SmallCaps},
-%]{Times New Roman}
-%\setsansfont[SmallCapsFont={Fontin SmallCaps}]{Optima}
-%\setmonofont{Monaco}
+\setmainfont[
+    ItalicFont = {Times New Roman Italic},
+    BoldFont = {Times New Roman Bold},
+    BoldItalicFont = {Times New Roman Bold Italic},
+    SmallCapsFont = {Bodoni 72 Smallcaps},
+    %SmallCapsFeatures={Letters=SmallCaps},
+]{Times New Roman}
+\setsansfont{Optima}
+\setmonofont[BoldFont=Source Code Pro Semibold]{Source Code Pro}
 
 \def\timozer@def@fontsize#1#2{%
     \expandafter\newcommand\csname #1\endcsname[1][1.3]{%

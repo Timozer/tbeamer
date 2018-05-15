@@ -18,7 +18,6 @@
 % AtBeginDocument, AtBeginEnvironment, AtEndEnvironment
 \RequirePackage{tikz}
 \RequirePackage{xifthen}
-\RequirePackage{timozercode}
 %\setbeamertemplate{background}{%
     %\begin{tikzpicture}
         %\useasboundingbox (0, 0) rectangle(\the\paperwidth, \the\paperheight);
@@ -106,13 +105,4 @@
 % Table of contents
 \setbeamertemplate{sections/subsections in toc}[square]
 
-% Test for minted code environment
-\defbeamertemplate*{code begin}{TIMOZER}
-{
-    \begin{minted}{tex}
-}
-\defbeamertemplate*{code end}{TIMOZER}
-{
-    \end{minted}
-}
 \mode<all>
